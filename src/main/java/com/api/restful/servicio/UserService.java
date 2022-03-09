@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface UserService
 {
-    User create(User user );
+    User create (User user );
 
     User findById( String id );
 
     List<User> all();
 
-    boolean deleteById(String id );
+   void deleteById(String id );
 
     User updateGrade( User user, String userId );
 

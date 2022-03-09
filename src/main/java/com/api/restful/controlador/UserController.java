@@ -21,38 +21,19 @@ public class UserController
 
 
     @GetMapping
-    public ResponseEntity<List<User>> all()
-    {
-        //TODO implement this method using UserService
-        return null;
-    }
+    public ResponseEntity<List<User>> all() {return null;}
 
     @GetMapping( "/{id}" )
-    public ResponseEntity<User> findById( @PathVariable String id )
-    {
-        //TODO implement this method using UserService
-        return null;
-    }
+    public ResponseEntity<User> findById( @PathVariable String id ) {return null;}
 
 
     @PostMapping
-    public ResponseEntity<User> create( @RequestBody UserDto userDto )
-    {
-        //TODO implement this method using UserService
-        return null;
-    }
+    public User create( @RequestBody UserDto userDto )
+    {return userService.create(new User(userDto));}
 
     @PutMapping( "/{id}" )
-    public ResponseEntity<User> update( @RequestBody UserDto userDto, @PathVariable String id )
-    {
-        //TODO implement this method using UserService
-        return null;
-    }
+    public ResponseEntity<User> update( @RequestBody UserDto userDto, @PathVariable String id ) {return null;}
 
     @DeleteMapping( "/{id}" )
-    public ResponseEntity<Boolean> delete( @PathVariable String id )
-    {
-        //TODO implement this method using UserService
-        return null;
-    }
+    public ResponseEntity<Boolean> delete( @PathVariable String id ) {return null;}
 }

@@ -1,57 +1,49 @@
 package com.api.restful.data;
 
+import com.api.restful.dto.UserDto;
+
 import java.util.Date;
 
 public class User {
 
 
     private String id;
-
     private  String name;
-
     private String email;
-
-    private  String lastname;
-
+    private  String lastName;
     private  Date created;
 
-    private String grade;
+    public User() {
+    }
 
-    public User(String id, String name, String email, String lastname)
-    {
 
-        this.id = id;
+    public User (UserDto userDto){
+       this(userDto.getName(), userDto.getEmail(), userDto.getLastName());
+    }
+
+    public User(String name, String email, String lastName) {
         this.name = name;
-        this.lastname = lastname;
         this.email = email;
-        this.created = new Date();
+        this.lastName = lastName;
     }
 
+    public String getId() {return id;}
 
-    public Date getCreated() {
-        return created;
-    }
+    public void setId(String id) {this.id = id;}
 
+    public String getName() {return name;}
 
-    public String getId() {
-        return id;
-    }
+    public void setName(String name) {this.name = name;}
 
-    public String getName() {
-        return name;
-    }
+    public String getEmail() {return email;}
 
-    public String getLastname() {
-        return lastname;
-    }
+    public void setEmail(String email) {this.email = email;}
 
-    public String getEmail() {
-        return email;
-    }
+    public String getLastName() {return lastName;}
 
-    public void setId(String id) { this.id = id; }
+    public void setLastName(String lastName) {this.lastName = lastName;}
 
-    public void setGrade(String Grade) { this.grade = grade;}
+    public Date getCreated() {return created;}
 
-
+    public void setCreated(Date created) {this.created = created;}
 }

@@ -3,22 +3,11 @@ package com.api.restful.dto;
 public class UserDto {
 
     private String name;
-
-
-
     private String email;
+    private String lastName;
 
 
-
-    private String lastname;
-
-    public UserDto(String name, String email, String lastname ) {
-        this.name = name;
-        this.email = email;
-        this.lastname = lastname;
-    }
-
-    public UserDto() {
+    public UserDto(){
     }
 
     public String getName() {
@@ -29,8 +18,8 @@ public class UserDto {
         return email;
     }
 
-    public String getLastname() {
-        return lastname;
+    public String getLastName() {
+        return lastName;
     }
 
 
